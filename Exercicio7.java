@@ -2,26 +2,23 @@ import java.util.Scanner;
 
 public class Exercicio7 {
     public static void main(String[] args) {
-        double Salario = 0;
-        double Percentual = 0;
-        double Vendas = 0;
-        double SalarioT = 0;
-        Scanner scanner = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
+        int numero, pares = 0, impares = 0;
 
-        System.out.println("Insira o salario do vendedor: ");
-        Salario = scanner.nextDouble();
+        for (int i = 1; i <= 10; i++) {
+            System.out.print("Digite o " + i + "º número: ");
+            numero = input.nextInt();
 
-        System.out.println("Insira o total de vendas do vendedor: ");
-        Vendas = scanner.nextDouble();
+            if (numero % 2 == 0) {
+                pares++;
+            } else {
+                impares++;
+            }
+        }
 
-        System.out.println("Insira quanto o usuario ganha por venda: ");
-        Percentual = scanner.nextDouble();
+        System.out.println("\nQuantidade de números pares: " + pares);
+        System.out.println("Quantidade de números ímpares: " + impares);
 
-        SalarioT = (Vendas * Percentual) + Salario;
-
-        System.out.printf("o salario total do usuario e de: " + SalarioT);
-
-        scanner.close();
-
+        input.close();
     }
 }

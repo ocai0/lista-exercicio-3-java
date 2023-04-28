@@ -1,23 +1,34 @@
+
+/**
+ * Faça um programa que peça uma nota, entre zero e dez. Mostre uma mensagem caso 
+ * o valor seja inválido e continue pedindo até que o usuário informe um valor válido.
+ */
 import java.util.Scanner;
 
 public class Exercicio1 {
 
     public static void main(String[] args) {
 
-        System.out.println("MediaAritmetica");
-
         Scanner scanner = new Scanner(System.in);
+        int numero;
 
-        System.out.println("Informe o primeiro número");
-        int numeroUm = scanner.nextInt();
+        do {
 
-        System.out.println("Informe o segundo número");
-        int numeroDois = scanner.nextInt();
+            System.out.println("Digite qual foi a nota do aluno de 0 a 10: ");
+            numero = scanner.nextInt();
 
-        int media = (numeroUm + numeroDois) / 2;
+            if (numero > 10)
+                System.out.println("\nNúmero Inválido !");
+            else if (numero < 0)
+                System.out.println("\nNúmero inválido! ");
+            else {
+                System.out.println("\nNúmero Registrado!");
+                break;
+            }
 
-        System.out.println("Resultado da média aritmética dos dois números informados é: " + media);
+        } while (true);
 
         scanner.close();
     }
+
 }

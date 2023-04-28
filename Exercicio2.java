@@ -1,24 +1,33 @@
-import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class Exercicio2 {
 
     public static void main(String[] args) {
 
-        System.out.println("Produto");
-
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Informe o Preço do Produto");
-        double numeroUm = scanner.nextDouble();
+        String nomedeUsuario, senha;
 
-        double soma = (numeroUm * 1.10);
+        System.out.println("Cadastre-se no sistema");
 
-        DecimalFormat df = new DecimalFormat("#.##");
+        do {
+            System.out.println("\nDigite o nome de usuário: ");
+            nomedeUsuario = scanner.nextLine();
 
-        System.out.println("Resultado do Produto acrescido é: " + df.format(soma));
+            System.out.println("\nDigite a senha: ");
+            senha = scanner.nextLine();
 
-        scanner.close();
+            if (nomedeUsuario.equals(senha)) {
+
+                System.out.println("\nO nome de usuário não pode ser igual a senha !");
+            }
+
+            else {
+
+                System.out.println("\nO usuário foi cadastrado ! ");
+            }
+
+        } while (nomedeUsuario.equals(senha));
 
     }
 

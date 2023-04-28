@@ -3,18 +3,27 @@ import java.util.Scanner;
 public class Exercicio6 {
 
     public static void main(String[] args) {
-        int x = 0, b = 0;
-        Scanner scanner = new Scanner(System.in);
 
-        System.out.println("escreva o valor do numero: ");
-        x = scanner.nextInt();
+        Scanner sc = new Scanner(System.in);
 
-        System.out.println("Escreva o valor da base: ");
-        b = scanner.nextInt();
+        System.out.println("Informe o primeiro número:");
+        int num1 = sc.nextInt();
 
-        double resultado = Math.log(x) / Math.log(b);
-        System.out.println(resultado);
+        System.out.println("Informe o segundo número:");
+        int num2 = sc.nextInt();
 
-        scanner.close();
+        int i = 0;
+
+        if (num1 < num2) {
+            for (i = num1; i <= num2; i++) {
+                System.out.println("Número: " + i);
+            }
+        } else {
+            for (i = num1; i >= num2; i--) {
+                System.out.println("Número: " + i);
+            }
+        }
+
+        sc.close();
     }
 }

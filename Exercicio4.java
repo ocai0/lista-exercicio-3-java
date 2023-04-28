@@ -1,34 +1,29 @@
 import java.util.Scanner;
+
 public class Exercicio4 {
     public static void main(String[] args) {
-        double M = 0;
-        //montante
-        double C = 0;
-        //capital
-        double I = 0;
-        //taxa em juros
-        double N = 0;
-        //prazo de aplicação
+        double n1, n2, n3, n4, n5, soma, media = 0;
 
-        double JT = 0;
+        Scanner scanner = new Scanner(System.in);
 
-        Scanner scanner = new Scanner(System.in); 
+        System.out.println("Digite o valor 1: ");
+        n1 = scanner.nextDouble();
+        System.out.println("Digite o valor 2: ");
+        n2 = scanner.nextDouble();
+        System.out.println("Digite o valor 3: ");
+        n3 = scanner.nextDouble();
+        System.out.println("Digite o valor 4: ");
+        n4 = scanner.nextDouble();
+        System.out.println("Digite o valor 5: ");
+        n5 = scanner.nextDouble();
 
-        System.out.println("Informe o Capital: ");
-        C = scanner.nextDouble();
+        soma = n1 + n2 + n3 + n4 + n5;
 
-        System.out.println("Informe o prazo de aplicação em meses: ");
-        N = scanner.nextDouble();
+        media = soma / 5;
 
-        System.out.println("Informe a taxa de juros mensal: ");
-        I = scanner.nextDouble();
-
-        JT = I/100;
-
-        M = Math.pow(1 + JT, N) * C;
-
-        System.out.printf("O valor do montante e: %.2f", + M);
-
+        System.out.printf("O valor da soma dos numeros e %.2f ", soma);
+        System.out.printf("\nA media e  %.2f ", media);
         scanner.close();
-}
+    }
+
 }
